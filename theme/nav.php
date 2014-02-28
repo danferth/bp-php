@@ -12,7 +12,7 @@
 	$marrathon = 		['v' => 1, 'n' => 'Marrathon', 		'l' => '/products/shoes/running/marrathon/index.php'];
 	$sandles = 			['v' => 1, 'n' => 'Sandles', 		'l' => '/products/shoes/sandles/index.php'];
 
-function liS($array, $class){
+function liA($array, $class){
 	if($array['v'] == 1){
 		if(isset($class)){
 			echo '<li class="'.$class.'"><a href="'.$array['l'].'">'.$array['n'].'</a></li>';
@@ -21,36 +21,41 @@ function liS($array, $class){
 		}
 	}
 }//liA
-function liG($class, $links = []){
-	if (isset($class) && $class != '') {
-		echo '<ul class= "sub-nav '.$class.'">';
-		foreach ($links as $key => $value) {
-			echo '<li><a href="'.$value['l'].'">'.$value['n'].'</a></li>';
-		}
-		echo '</ul>';
+
+function __liG_open($class){
+	if(isset($class)){
+		echo "<ul class='sub-nav ".$class."'>";
+	}else{
+		echo "<ul class='sub-nav'>";
 	}
 }
 
-liG('hello',[$backpacks, $shoes]);
+function __liG_close(){
+	echo "</ul>";
+}
 ?>
 <nav>
 <ul class="nav">
-<?php 
-liS($home);
-liS($about);
-liS($contact);
-liS($products);
-liG('hello',[$backpacks, $shoes]);
-				liS($hiking);
-				liS($running);
-						liS($dirt);
-						liS($crosstraining);
-						liS($marrathon);
-				liS($sandles);
-
-
-
-
+	<?php 
+	liA($home);
+	liA($about);
+	liA($contact);
+	liA($products);
+		__liG_open();
+		liA($backpacks);
+		liA($shoes);
+			__liG_open();
+			liA($hiking);
+			liA($running);
+				__liG_open();
+				liA($dirt);
+				liA($crosstraining);
+				liA($marrathon);
+				__liG_close();
+			liA($sandles);
+			__liG_close();
+		__liG_close();
+	
 ?>
 </ul>
 </nav>
