@@ -22,16 +22,18 @@ function liA($array, $class){
 	}
 }//liA
 
-function __liG_open($class){
+function __li_open($array, $class){
 	if(isset($class)){
+		echo  '<li><a href="'.$array['l'].'">'.$array['n'].'</a>';
 		echo "<ul class='sub-nav ".$class."'>";
 	}else{
+		echo  '<li><a href="'.$array['l'].'">'.$array['n'].'</a>';
 		echo "<ul class='sub-nav'>";
 	}
 }
 
-function __liG_close(){
-	echo "</ul>";
+function __li_close(){
+	echo "</li></ul>";
 }
 ?>
 <nav>
@@ -40,22 +42,18 @@ function __liG_close(){
 	liA($home);
 	liA($about);
 	liA($contact);
-	liA($products);
-		__liG_open();
+		__li_open($products);
 		liA($backpacks);
-		liA($shoes);
-			__liG_open();
+			__li_open($shoes);
 			liA($hiking);
-			liA($running);
-				__liG_open();
+				__li_open($running);
 				liA($dirt);
 				liA($crosstraining);
 				liA($marrathon);
-				__liG_close();
+				__li_close();
 			liA($sandles);
-			__liG_close();
-		__liG_close();
-	
+			__li_close();
+		__li_close();
 ?>
 </ul>
 </nav>
