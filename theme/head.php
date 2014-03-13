@@ -36,7 +36,7 @@
         <link rel="stylesheet" href="/assets/css/build/global.css">
         <?php
         if(isset($pageCSS) && $pageCSS != ""){
-            echo "<link rel=\"stylesheet\" href=\"/assets/css/build/".$pageCSS.".css\">";
+            echo "<link rel=\"stylesheet\" href=\"/assets/css/build/page/".$pageCSS.".css\">";
         }
         ?>
 
