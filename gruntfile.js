@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                 file:[{
                     cwd: 'assets/images/',
                     src:['**/*.{png,jpg,gif}'],
-                    dest: 'assets/images/build/'
+                    dest: 'assets/images/'
                 }]
             }
         },
@@ -34,26 +34,28 @@ module.exports = function(grunt) {
         sass:{
             dist:{
                 options:{
-                    style: 'expanded'
+                    style: 'expanded',
+                    //style: 'compressed' (comment above and below and uncomment this one for production)
+                    lineNumbers: true
                 },
-                files:{
-                    'assets/css/build/global.css': 'assets/sass/global.scss',
-                    'assets/css/build/page/*.css':'assets/sass/page/*.scss'
-                }
+                files:[{
+                        expand: true,
+                        flatten: true,
+                        cwd: 'assets/',
+                        src: ['css/sass/*.scss'],
+                        dest: 'assets/css/build/',
+                        ext: '.css'
+                    }]
             }
         },
 
-        autoprefixer: {
-            dist: {
-                options: {
+        autoprefixer:{
+               options: {
                     browsers: ['last 2 version', 'ie 8', 'ie 9']
-                }
-                files: {
-                    'assets/css/build/global.css': 'global.css',
-                    'assets/css/build/page/*.css': 'assets/css/build/page/'
-                }
-
-            }
+                },
+                no_dest: {
+                    src: 'assets/css/build/*.css'
+                },
         },
 
         watch:{
@@ -61,20 +63,16 @@ module.exports = function(grunt) {
                 files:['assets/js/*.js'],
                 tasks:['concat','uglify'],
                 options:{
-                    spawn: false,
+                    spawn: false
                 }
             },
             css:{
-                files:['assets/css/*.scss'],
-                tasks:['sass'],
+                files:['assets/css/sass/*.scss'],
+                tasks:['sass', 'autoprefixer'],
                 options:{
-                    spawn: false,
+                    spawn: false
                 }
             },
-            styles: {
-                files: ['assets/css/build/*'],
-                tasks: ['autoprefixer']
-            }
         }
 
     });

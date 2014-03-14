@@ -4,10 +4,10 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/assets/js/lib/jquery-1.10.1.min.js"><\/script>')</script>
-        <script src="/assets/js/build/production.js"></script>
+        <script src="/assets/js/build/production.min.js"></script>
         <?php
         if(isset($pageJS) && $pageJS != ""){
-            echo "<script href=\"assets/js/".$pageJS.".js\">";
+            echo "<script href=\"assets/js/page/".$pageJS.".js\">";
         }
         ?>
         <script>

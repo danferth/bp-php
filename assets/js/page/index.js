@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
-$('.taco').hide();
+$(.taco).fadeIn();
+
 
 });
