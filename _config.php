@@ -1,7 +1,7 @@
 <?php
 $mobileView = true;
 function head($page){
-	include '_pages.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/_pages.php';
 
 	$p 				= $pages[$page];
 	$title 			= $p['title'];
