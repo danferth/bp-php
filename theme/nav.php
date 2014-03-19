@@ -1,48 +1,30 @@
-<?php
-function liA($array, $class){
-
-		if(isset($class)){
-			echo '<li class="'.$class.'"><a href="'.$pages[$array]['link'].'">'.$pages[$array]['name'].'</a></li>';
-		}else{
-			echo '<li><a href="'.$pages[$array]['link'].'">'.$pages[$array]['name'].'</a></li>';
-		}
-}//liA
-
-function __li_open($link, $class){
-
-	if(isset($class)){
-		echo  '<li><a href="'.$pages[$link]['link'].'">'.$pages[$link]['name'].'</a>';
-		echo "<ul class='sub-nav ".$class."'>";
-	}else{
-		echo  '<li><a href="'.$pages[$link]['link'].'">'.$pages[$link]['name'].'</a>';
-		echo "<ul class='sub-nav'>";
-	}
-}
-
-function __li_close(){
-	echo "</li></ul>";
-}
-?>
 <nav>
 <ul class="nav">
-	<?php 
-	liA($home);
-	liA($about);
-	liA($contact);
-		__li_open($products);
-		liA($backpacks);
-			__li_open($shoes);
-			liA($hiking);
-				__li_open($running);
-				liA($dirt);
-				liA($crosstraining);
-				liA($marrathon);
-				__li_close();
-			liA($sandles);
-			__li_close();
-		__li_close();
+	<?php
+	include $_SERVER['DOCUMENT_ROOT'].'/_pages.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/theme/_nav.php';
 
-echo $pages['product']['link'];
+
+
+	$nav = new navigation();
+
+	$nav->setNav($pages);
+
+	$nav->liA('index');
+	$nav->liA('about');
+	$nav->liA('contact');
+		$nav->__li_open('products');
+		$nav->liA('backpacks');
+			$nav->__li_open('shoes');
+			$nav->liA('hiking');
+				$nav->__li_open('running');
+				$nav->liA('dirt');
+				$nav->liA('crosstraining');
+				$nav->liA('marrathon');
+				$nav->__li_close();
+			$nav->liA('sandles');
+			$nav->__li_close();
+		$nav->__li_close();
 
 ?>
 </ul>
