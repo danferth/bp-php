@@ -2,7 +2,7 @@
 <ul class="nav">
 	<?php
 	include $_SERVER['DOCUMENT_ROOT'].'/_pages.php';
-	include $_SERVER['DOCUMENT_ROOT'].'/theme/_nav.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/classes/_nav.php';
 
 	$nav = new navigation();
 	$nav->setNav($pages);

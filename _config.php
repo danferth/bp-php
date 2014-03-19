@@ -10,11 +10,11 @@ function head($page){
 	$pageJS 		= $p['pageJS'];
 
 	if($p['sessions'] == true){
-		include $_SERVER['DOCUMENT_ROOT'].'/theme/_sessions.php';
+		include $_SERVER['DOCUMENT_ROOT'].'/classes/_sessions.php';
 	}else{ echo "<!-- no sessions -->"; }
 	
 	if($p['db'] == true){
-		include $_SERVER['DOCUMENT_ROOT'].'/theme/_dbConnect.php';
+		include $_SERVER['DOCUMENT_ROOT'].'/classes/_dbConnect.php';
 
 		define("DB_HOST", "localhost");
 		define("DB_USER", "root");
