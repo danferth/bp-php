@@ -9,12 +9,13 @@
 # THANKS
 
     Sublime Text 3
-    Digital Ocean
+    Grunt
 
 # TECHNOLOGY COLOPHON
 
-    HTML5
+    HTML
     CSS - from SCSS
     jQuery
     PHP
+    Grunt
 
