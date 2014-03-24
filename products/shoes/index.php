@@ -1,6 +1,7 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT'].'/_config.php';
-head('shoes');
+$body->set_page('shoes');
+$body->head();
  ?>
 
 
@@ -10,4 +11,4 @@ head('shoes');
 
 
 
- <?php foot(); ?>
+ <?php $body->foot(); ?>

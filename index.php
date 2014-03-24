@@ -1,6 +1,7 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/_config.php';
-head('index');
+$body->set_page('index');
+$body->head();
 
 $database = new dbConnect();
 $database->query('SELECT * FROM users');
@@ -14,4 +15,4 @@ echo $row[0]['name'].' | '.$row[0]['type'];
 <p>you are on the home page</p>
 
 
-<?php foot(); ?>
+<?php $body->foot(); ?>

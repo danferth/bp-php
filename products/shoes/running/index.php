@@ -1,13 +1,14 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT'].'/_config.php';
-head('running');
+$body->set_page('running');
+$body->head();
  ?>
 
 
-<h1>Marrathon</h1>
+<h1>Running</h1>
 <p>you are viewing the running subcategory</p>
 
 
 
 
- <?php foot(); ?>
+ <?php $body->foot(); ?>

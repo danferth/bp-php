@@ -1,6 +1,7 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT'].'/_config.php';
-head('marrathon');
+$body->set_page('marrathon');
+$body->head();
  ?>
 
 
@@ -10,4 +11,4 @@ head('marrathon');
 
 
 
- <?php foot(); ?>
+ <?php $body->foot(); ?>

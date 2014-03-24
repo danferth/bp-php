@@ -1,32 +1,9 @@
 <?php
 $mobileView = true;
-function head($page){
-	include $_SERVER['DOCUMENT_ROOT'].'/_pages.php';
+include $_SERVER['DOCUMENT_ROOT'].'/_pages.php';
+include $_SERVER['DOCUMENT_ROOT'].'/classes/_body.php';
 
-	$p 				= $pages[$page];
-	$title 			= $p['title'];
-	$description 	= $p['description'];
-	$pageCSS 		= $p['pageCSS'];
-	$pageJS 		= $p['pageJS'];
+$body = new body();
+$body ->set_PageArray($pages);
 
-	if($p['sessions'] == true){
-		include $_SERVER['DOCUMENT_ROOT'].'/classes/_sessions.php';
-	}else{ echo "<!-- no sessions -->"; }
-	
-	if($p['db'] == true){
-		include $_SERVER['DOCUMENT_ROOT'].'/classes/_dbConnect.php';
-
-		define("DB_HOST", "localhost");
-		define("DB_USER", "root");
-		define("DB_PASS", "");
-		define("DB_NAME", "test");
-
-	}else{ echo "<!-- no db connect -->"; }
-
-	include $_SERVER['DOCUMENT_ROOT'].'/theme/head.php';
-}
-
-function foot(){
-	include $_SERVER['DOCUMENT_ROOT'].'/theme/foot.php';
-}
 ?>

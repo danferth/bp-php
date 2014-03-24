@@ -1,6 +1,7 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT'].'/_config.php';
-head('crosstraining');
+$body->set_page('crosstraining');
+$body->head();
  ?>
 
 
@@ -10,4 +11,4 @@ head('crosstraining');
 
 
 
- <?php foot(); ?>
+ <?php $body->foot(); ?>

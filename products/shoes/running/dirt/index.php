@@ -1,6 +1,7 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT'].'/_config.php';
-head('dirt');
+$body->set_page('dirt');
+$body->head();
  ?>
 
 
@@ -10,4 +11,4 @@ head('dirt');
 
 
 
- <?php foot(); ?>
+ <?php $body->foot(); ?>

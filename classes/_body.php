@@ -2,19 +2,25 @@
 
 class body{
 
-	public $pageArray;
-	public $title;
-	public $description;
-	public $pageCSS;
-	public $pageJS;
+	private $pageArray;
+	private $page;
+	private $currentPage;
 
-	function head($page){
+	function set_pageArray($var){
+		$this->pageArray = $var;
+	}
+	function set_page($var){
+		$this->page = $var;
+		$this->currentPage = $this->pageArray[$this->page];
+	}
 
-		if($p['sessions'] == true){
+	function head(){
+
+		if($this->currentPage['sessions'] == true){
 			include $_SERVER['DOCUMENT_ROOT'].'/classes/_sessions.php';
 		}else{ echo "<!-- no sessions -->"; }
 		
-		if($p['db'] == true){
+		if($this->currentPage['db'] == true){
 			include $_SERVER['DOCUMENT_ROOT'].'/classes/_dbConnect.php';
 	
 			define("DB_HOST", "localhost");

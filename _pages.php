@@ -8,6 +8,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'Home',
 		'link' 				=> '/index.php'
 	],//index
@@ -19,6 +20,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'About Us',
 		'link' 				=> '/pages/about.php'
 	],//about
@@ -30,6 +32,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	true,
 		'name' 				=> 'Contact Us',
 		'link' 				=> '/pages/contact.php'
 	],//contact
@@ -41,6 +44,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'Products',
 		'link' 				=> '/products/index.php'
 	],//products
@@ -52,6 +56,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'Backpacks',
 		'link' 				=> '/products/backpacks/index.php'
 	],//backpacks
@@ -63,6 +68,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'Shoes',
 		'link' 				=> '/products/shoes/index.php'
 	],//shoes
@@ -74,6 +80,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'Sandles',
 		'link' 				=> '/products/shoes/sandles/index.php'
 	],//sandles
@@ -85,6 +92,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name'				=> 'Hiking',
 		'link'				=> '/products/shoes/hiking/index.php'
 	],//hiking
@@ -96,6 +104,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'Running',
 		'link' 				=> '/products/shoes/running/index.php'
 	],//running
@@ -107,6 +116,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'Crosstraining',
 		'link' 				=> '/products/shoes/running/crosstraining/index.php'
 	],//crosstraining
@@ -118,6 +128,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'Dirt',
 		'link' 				=> '/products/shoes/running/dirt/index.php'
 	],//dirt
@@ -129,6 +140,7 @@ $pages = [
 		'theme'				=>	'basic',
 		'pageCSS'			=>	'',
 		'pageJS'			=>	'',
+		'form'				=>	false,
 		'name' 				=> 'Marrathon',
 		'link' 				=> '/products/shoes/running/marrathon/index.php'
 	]//marrathon

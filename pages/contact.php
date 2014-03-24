@@ -1,6 +1,7 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/_config.php';
-head('contact');
+$body->set_page('contact');
+$body->head();
 ?>
 
 <h1>Contact Us</h1>
@@ -13,6 +14,6 @@ head('contact');
 
 </form>
 
-<?php foot(); ?>
+<?php $body->foot(); ?>
 
 

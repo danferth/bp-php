@@ -6,9 +6,12 @@
         <script>window.jQuery || document.write('<script src="/assets/js/lib/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="/assets/js/build/production.min.js"></script>
         <?php
-        if(isset($pageJS) && $pageJS != ""){
-            echo "<script href=\"assets/js/page/".$pageJS.".js\">";
+        if(isset($this->currentPage['pageJS']) && $this->currentPage['pageJS'] != ""){
+            echo "<script href=\"/assets/js/page/".$pageJS.".js\"></script>";
         }
+        if (isset($this->currentPage['form']) && $this->currentPage['form'] == true) {
+            echo "<script href=\"/assets/js/plugin/jquery.validate.min.js\"></script>";
+        }else{ echo '<!-- no form to validate on this page -->';}
         ?>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

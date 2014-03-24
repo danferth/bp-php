@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <link rel="dns-prefetch" href="//ajax.googleapis.com">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php echo $title; ?></title>
-        <meta name="description" content="<?php echo $description; ?>">
+        <title><?php echo $this->currentPage['title']; ?></title>
+        <meta name="description" content="<?php echo $this->currentPage['description']; ?>">
         <?php
         if(isset($mobileView) && $mobileView == true){
             echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
@@ -35,8 +35,8 @@
         <link type="text/plain" rel="author" href="/humans.txt">
         <link rel="stylesheet" href="/assets/css/build/global.css">
         <?php
-        if(isset($pageCSS) && $pageCSS != ""){
-            echo "<link rel=\"stylesheet\" href=\"/assets/css/build/".$pageCSS.".css\">";
+        if(isset($this->currentPage['pageCSS']) && $this->currentPage['pageCSS'] != ""){
+            echo "<link rel=\"stylesheet\" href=\"/assets/css/build/".$this->currentPage['pageCSS'].".css\">";
         }
         ?>
 
