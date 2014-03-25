@@ -2,23 +2,29 @@
 
 class test{
 
-	private $pageArray;
-	private $page;
-	private $title;
-	private $description;
-	private $pageCSS;
-	private $pageJS;
+	private $variable;
 
-	function setPageArray($var){
-		$this->pageArray = $var;
+	function set_variable($var){
+		$this->variable = $var;
+	}
+	function get_variable(){
+		return $this->variable;
 	}
 
-	function head($var){
+	function statement($foo, $bar){
+		$var = $this->get_variable();
+		$srt = <<<STR
+		The thing is
+		I don't know how this will look in the end<br>
+		<br>
+		I was hoping that I could insert $foo or maybe
+		Insert $bar as well.<br><br>
 
-		$this->page = $var;
-		$currentPage = $this->pageArray[$this->page];
+		Or even use class variables like here: $var.
 
-		echo $currentPage['description'];
+STR;
+
+	echo $srt;
 
 	}
 
