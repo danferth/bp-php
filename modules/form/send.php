@@ -16,9 +16,9 @@ if (!isset($_POST['JQcheck'])){
    		$next_page = 'index.php';
    		// Add error message to the query string
 		$error = "nojava";
-  		 $query_string .= '&error=' . $error;
-  		 // redirect to contact page
-  		 header('Location: http://' . $server_dir . $next_page . $query_string);
+  		$query_string .= '&error=' . $error;
+  		// redirect to contact page
+  		header('Location: http://' . $server_dir . $next_page . $query_string);
 	}else{
 		if (is_array($_POST))
 		{

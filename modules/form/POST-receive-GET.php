@@ -1,5 +1,3 @@
-
-
 <script>
 $(document).ready(function(){
 //this adds hidden input at end of form for js check on submit

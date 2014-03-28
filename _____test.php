@@ -1,23 +1,13 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT'].'/classes/_form.php';
-//include $_SERVER['DOCUMENT_ROOT'].'/__test_class.php';
-
-echo 'start<br><hr>';
-
-
-
 
 $x = new form();
 $x->set_action('thankyou.php');
 $x->set_method('POST');
 $x->set_form_ID('testForm');
 
-echo 'vars set up<br><br>';
-
 $x->jsCheck();
 $x->start_form();
-
-echo '<br><br>form started';
 ?>
 
 <input type="text" name="fname" placeholder="first name">
@@ -29,8 +19,10 @@ echo '<br><br>form started';
 <hr>
 
 <?php 
+echo 'New class <i>process</i><hr>';
 
+$p = new process();
+$p->set_module_location('/modules/form');
+$p->require_mime();
 
-
-
- ?>
+?>
