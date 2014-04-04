@@ -24,7 +24,7 @@ This is a boilerplate for starting a small site or app with `PHP`, it was create
 - [ ] Log-in system prebuilt
 - [ ] Install script for db creation
 - [ ] Backend form for easy creation of new pages
-- [ ] Create first base theme & pages **(index, about, contact-form)**
+- [ ] Create first base theme & pages *(index, about, contact-form)*
 
 ###This is a work in progress
 If you plan to clone and play with please keep in mind that it is a work in progress, so any issues please let me know or fix it yourself and submit a pull.
