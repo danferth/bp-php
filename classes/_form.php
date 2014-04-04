@@ -190,12 +190,8 @@ class process_form{
 			$this->mail_headers .= "MIME-Version: 1.0\r\n";
 			$this->mail_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 			mail($this->get_mail_to(), $this->get_mail_subject(), $this->get_mail_body(), $this->get_mail_headers());
-				//will this work???
-				//create test where you are testing form completion of method
-				if ($mail)
-					{
-						header('Location: http://' . $server_dir . $next_page . $query_string);
-					}
+
+			header('Location: http://' . $server_dir . $next_page . $query_string);
 		}	
 	}
 
