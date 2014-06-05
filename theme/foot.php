@@ -7,10 +7,10 @@
         <script src="/assets/js/build/production.min.js"></script>
         <?php
         if(isset($this->currentPage['pageJS']) && $this->currentPage['pageJS'] != ""){
-            echo "<script href=\"/assets/js/page/".$pageJS.".js\"></script>";
+            echo "<script src=\"/assets/js/page/".$this->currentPage['pageJS'].".js\"></script>";
         }
         if (isset($this->currentPage['form']) && $this->currentPage['form'] == true) {
-            echo "<script href=\"/assets/js/plugin/jquery.validate.min.js\"></script>";
+            echo "<script src=\"/assets/js/plugin/jquery.validate.min.js\"></script>";
         }else{ echo '<!-- no form to validate on this page -->';}
         ?>
         <script>
